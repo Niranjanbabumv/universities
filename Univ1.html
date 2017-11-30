@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style type="text/css">
+		.button {
+			background-color: gray;
+			border: none;
+			color: white;
+			padding: 8px 15px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 20px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		</style>
+		<meta charset="ISO-8859-1">
+	</head>
+	<body>
+		<form action = "http://localhost:8080/studentInfo" method = "POST" enctype = "multipart/form-data">
+		<div style="border: 1px solid; width: 73%;">
+				<p style="text-align: center;font-family: cursive;font-style: normal;">Illinios State University</p><input type="submit" class="submit" value="Login" id = "submit" style="float: right;">
+				<p style="text-align: center;font-family: cursive;font-style: normal;">Address : 100 N University ST, Normal, IL 61761, USA  Telephone: 815-226-4901</p>				
+		</div>
+		<p style="font-family: cursive;font-style: normal;font-size: x-large;;">Apply for Admission</p>
+			<table cellspacing = "1em" style="border: 1px solid black;">
+				<tr>
+					<td><img alt="Logo" src="human.png" style="width: 2em;height: 2em">Applicant Details</td>
+				<tr>
+				<tr>
+					<td colspan="3"><hr/></td>
+				</tr>
+				<tr>
+					<th style="text-align: left; font-family: cursive;font-style: normal;">Legal Name * <br><br><input type ="text" id= "name" name="name"></th>
+					<th style="text-align: left; font-family: cursive;font-style: normal; padding-left: 10em;">SSN * <br><br><input type ="number" id="ssn" name="ssn" placeholder="123-45-6789" onKeyPress="if(this.value.length==9) return false;"></th>
+					<th style="text-align: left; padding-left: 10em; font-family: cursive;font-style: normal;">Date Of Birth * (mm/dd/yyyy) <br><br><input type ="date" id="date" name="dob"></th>
+				</tr>
+				<tr>
+					<th style="text-align: left; font-family: cursive;font-style: normal; padding-top: 2em;">Gender * <br><br><input type ="checkbox" class="messageCheckbox" name="gender[]" value="Male">Male<input type ="checkbox" class="messageCheckbox" name="gender[]" value="Female">Female</th>
+					<th style="text-align: left; padding-left: 10em; font-family: cursive;font-style: normal; padding-top: 2em;">Email * <br><br><input type ="text" id="email" name="email"></th>
+					<th style="text-align: left; padding-left: 10em; font-family: cursive;font-style: normal; padding-top: 2em;">Cell Phone * <br><br>+&nbsp;<input type ="number" name="countrycode" id="code" style="width: 3em;" onKeyPress="if(this.value.length==2) return false;">&nbsp;-&nbsp;<input type ="number" name="phone" id="mobilenumber" onKeyPress="if(this.value.length==10) return false;"></th>
+				</tr>
+				<tr>
+					<th style="text-align: left; font-family: cursive;font-style: normal; padding-top: 2em; padding-bottom: 2em;">Address * <br><br><input type ="text" name="address" id="address" style="width: 30em;"></th>
+					<th style="text-align: left; padding-left: 10em; font-family: cursive;font-style: normal; padding-top: 2em; padding-bottom: 2em;">Upload Photo Id Proof * <br><br><input type ="file" name="file" id="file" accept="image/*"></th>
+				</tr>
+				<tr>
+					<th style="text-align: left; font-family: cursive;font-style: normal; padding-top: 2em; padding-bottom: 2em;">Digital Identification No. * <br><br><input type ="text" name="digitalId" id="digitalId" style="width: 30em;"></th>
+				</tr>
+				<tr>
+					<td><img alt="Logo" src="human.png" style="width: 2em;height: 2em">Course Details</td>
+				<tr>
+				<tr>
+					<td colspan="3"><hr/></td>
+				</tr>
+				<tr>
+					<th style="text-align: left; font-family: cursive;font-style: normal;">Applying For * <br><br><input type ="checkbox" class="messageCheckbox" name="course[]" value="UG">UG<input type ="checkbox" class="messageCheckbox" name="course[]" value="PG">PG</th>
+					<th style="text-align: left; font-family: cursive;font-style: normal;">Course * <br><br>
+								<select>   
+									<option value="volvo">Please select..</option>								
+									<option value="volvo">Ancient History</option>
+								</select>
+					</th>
+				</tr>
+				<tr>
+					<th><br><input type="submit" class="submit" value="Submit" id = "submit" style="float: left;"><br><br></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

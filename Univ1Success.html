@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Digital Id Successfully Generated</title>
+</head>
+<body>
+		<div style="border: 1px solid;">
+				<p style="text-align: center;font-family: cursive;font-style: normal;">Illinios State University</p><input type="submit" class="submit" value="Login" id = "submit" style="float: right;">
+				<p style="text-align: center;font-family: cursive;font-style: normal;">Address : 100 N University ST, Normal, IL 61761, USA  Telephone: 815-226-4901</p>				
+		</div>
+	<p style="font-family: cursive;font-style: normal;font-size: x-large;">Apply for Admission</p>
+	<div style="border: 1px black solid;">
+	<p style="font-family: cursive;font-style: normal;font-size: x-large;" align="center"><img alt="Success" src="Success.PNG" width="30" height="20"></p>
+	<p style="font-family: cursive;font-style: normal;font-size: medium;" align="center">The application form is successfully submitted to us. If you are</p>
+	<p style="font-family: cursive;font-style: normal; font-size: medium;" align="center">selected, then a valid student Id will be sent to your email address. Thanks.</p>
+	<p align="center"><input type="button" value="OK" id="Ok"></p>
+	<br>
+	<br>
+	</div>
+	<script>
+			$('#Ok').click(function(){
+				window.location.replace("http://localhost:8080/AdminLogin.html");
+			});
+	</script>
+</body>
+</html>

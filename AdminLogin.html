@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>		
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<meta charset="ISO-8859-1">
+		<title>Agent Login Screen</title>
+	</head>
+	<body>
+			<center><img alt="Logo" src="login.png" style="width: 25em;height: 20em"></center>
+				<table cellspacing = "10em" style="margin: 0px auto; border: 1px solid black; width: 15em;">
+					<tr>
+						<th style="text-align: left;">User Name :<br><input type="text" id="userName" name="userName"></th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Password :<br><input type="password" id="password" name="password"><br><br></th>
+					</tr>
+					<tr>
+						<th><input type = "submit" value = "Click To Login" id = "submit"></th>
+					</tr>
+				</table>
+		<script>
+			$('#submit').click(function(){
+					var data = {};
+					data.userName = document.getElementById("userName").value;
+					data.password = document.getElementById("password").value;
+					console.log(data);
+					
+					$.ajax({
+						type: 'POST',
+						data: JSON.stringify(data),
+				        contentType: 'application/json',
+                        url: 'http://localhost:8080/loginInfo',						
+						success: function (result) {
+							console.log(result);
+							result = JSON.parse(result);
+							if(result.status == 200){
+								window.location.replace("http://localhost:8080/Univ1.html");
+							}else{
+								alert(result.message);
+							}
+						}
+					});
+			});
+		</script>
+	</body>
+</html>
